@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"/>
+</head>
+<body>
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+    <header class="container">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-book-open"></i>Biblioteca
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="#">Livros</a>
+                <a class="nav-link" href="#">Reserva</a>
+            </div>
+        </div>
+    </header>
+</div>
+<main class="container">
+    <form class="form-inline">
+        <div class="input-group mt-5 mb-5 col-12">
+            <input type="text" class="form-control" placeholder="Busque pelo nome do livro"/>
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <a class="text-dark" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+    <section class="col-12">
+        <div class="d-flex flex-row">
+            <img src="{% static 'img/book.png'%}" class="img-fluid img-thumbnail rounded" style="height: 250px"/>
+            <div class="flex-column ml-4"><h1>Titulo</h1>
+                <h2>Autor</h2></div>
+        </div>
+        <div class="d-flex flex-row"><p class="col-8">Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit.Suspendisse aliquet eros temporodio tristique congue.Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Nullam in magna sedlibero viverra scelerisque. Nam efficitur justo dolor. Quisque vel dui fermentum,
+            posuere orci non,vehicula elit. Cras nulla ipsum, vulputate faucibus venenatis sit amet, malesuada at sem.
+            Pellentesqueat felis sit amet dolor sollicitudin rhoncus eu vitae massa. Donec tincidunt magna sed
+            hendreritultrices. Integer a enim quis ex rhoncus faucibus et ac dui. Nullamvel ipsum erat. Morbi tristique
+            esteget dui pharetra pulvinar. Etiam eu magna et libero feugiat tincidunt eget at sapien. Duis
+            sagittisefficitur massa ut tincidunt.</p>
+            <ul class="list-group ml-3 col-4">
+                <li class="list-group-item">Páginas: 133</li>
+                <li class="list-group-item">Editora: Editora X</li>
+                <li class="list-group-item">Edição: 9</li>
+                <li class="list-group-item">Ano da publicação: 2020</li>
+                <li class="list-group-item">Idioma: Português</li>
+                <li class="list-group-item">ISBN: 9788532311443</li>
+            </ul>
+        </div>
+    </section>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

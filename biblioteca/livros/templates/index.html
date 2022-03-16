@@ -1,0 +1,68 @@
+<!--carrega os arquivos estaticos para cá-->
+{% load static %}
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head><meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Biblioteca</title>
+        <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"/>
+    </head>
+    <body>
+        <div class="navbar navbar-expand-lg navbar-light bg-light">
+            <header class="container"><a class="navbar-brand" href="#">
+                <i class="fas fa-book-open"></i>BibliotecaP</a>
+                <button class="navbar-toggler"type="button"data-toggle="collapse"data-target="#navbarNavAltMarkup"aria-controls="navbarNavAltMarkup"aria-expanded="false"aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup"><div class="navbar-nav">
+                    <a class="nav-link" href="{% url 'livro' %}">Livros</a>
+                    <a class="nav-link" href="{% url 'livro' %}">Reserva</a>
+                </div></div>
+            </header>
+        </div>
+        <main class="container">
+            <form class="form-inline">
+                <div class="input-group mt-5 mb-5 col-12">
+                    <input type="text"class="form-control"placeholder="Busque pelo nome do livro"/>
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <a class="text-dark" href="#">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="col-12 d-flex flex-row flex-wrap justify-content-center">
+                <div class="card mr-4 mb-3" style="width: 18rem">
+                    <img src="{% static 'img/book.png'%}" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse aliquet eros tempor odio tristique congue.</p>
+                        <a href="{% url 'livro' %}" class="card-link">Detalhes</a>
+                    </div>
+                </div>
+                <div class="card mr-4 mb-3" style="width: 18rem">
+                    <img src="{% static 'img/book.png'%}" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse aliquet eros tempor odio tristique congue.</p>
+                        <a href="{% url 'livro' %}" class="card-link">Detalhes</a>
+                    </div>
+                </div>
+                <div class="card mr-4 mb-3" style="width: 18rem">
+                    <img src="{% static 'img/book.png'%}" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">Titulo</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse aliquet eros tempor odio tristique congue.</p>
+                        <a href="{% url 'livro' %}" class="card-link">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
