@@ -12,6 +12,7 @@ class Livro(models.Model):
     anopublicacao = models.IntegerField()
     idioma = models.CharField(max_length=20)
     isbn = models.CharField(max_length=20)
+    capa = models.ImageField(upload_to='capas/%d/%m/%y', blank=True)
     emprestado = models.BooleanField(default=False)
 
     def __str__(self):

@@ -5,18 +5,16 @@
     {% include 'partials/cabecalho.html' %}
 </div>
 <main class="container">
-    <form class="form-inline">
-        <div class="input-group mt-5 mb-5 col-12">
-            <input type="text" class="form-control" placeholder="Busque pelo nome do livro"/>
-            <div class="input-group-append">
-                <div class="input-group-text"><a class="text-dark" href="#"><i class="fas fa-search"></i></a></div>
-            </div>
-        </div>
-    </form>
+    {% include 'partials/busca.html' %}
     <div class="col-12 d-flex flex-row flex-wrap justify-content-center">{% for livro in livros %}
-        <div class="card mr-4 mb-3" style="width: 18rem"><img src="{% static 'img/book.png'%}" class="card-img-top"/>
+        <div class="card mr-4 mb-3" style="width: 18rem">
+            {% if livro.capa == '' %}
+                <img src="{% static 'img/book.png'%}" class="card-img-top"/>
+            {% else %}
+                <img src="{{ livro.capa.url }}" class="card-img-top"/>
+            {% endif %}
             <div class="card-body"><h5 class="card-title">{{ livro.titulo }}</h5>
-<!--                slice corta a descricao para que seja da posicao 0 até a 150 caracteres-->
+                <!--slice corta a descricao para que seja da posicao 0 até a 150 caracteres-->
                 <p class="card-text">{{ livro.descricao|slice:':150'|add:'...' }}</p>
                 <a href="{% url 'livro' livro.id %}" class="card-link">Detalhes</a>
 
