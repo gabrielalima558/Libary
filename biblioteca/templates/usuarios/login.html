@@ -4,7 +4,9 @@
 <div class="navbar navbar-expand-lg navbar-light bg-light">{% include 'partials/_cabecalho.html' %}</div>
 <main class="container">
     <div class="col-12"><h2 class="mt-4 mb-5">Login</h2>
-        <form>
+        {% include 'partials/_alertas.html' %}
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="email">E-mail</label>
                 <input type="email" class="form-control" id="email"
@@ -26,5 +28,6 @@
 </main>
 <script>
 function irCadastro() {location.href = '{% url 'cadastro' %}';}
+
 
 </script>{% endblock %}
